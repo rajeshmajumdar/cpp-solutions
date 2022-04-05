@@ -61,3 +61,30 @@ if(max < len) {
 
 return s.substr(start, max);
 ```
+
+> **[Median of two sorted arrays](median_sorted_arrays.cc)** - Leetcode
+
+The difficulty level for this question on leetcode is `hard`, but now that I did it I don't know about that. It only needs the basic knowledge of binary search and some pointers.
+
+----
+- **Example 1**
+
+Input: `nums1 = [1,3], nums2 = [2]`\
+Output: `2.00000`\
+Explanation: `merged array = [1,2,3] and median is 2.`\
+
+----
+- **Example 2**
+
+Input: `nums1 = [1,2], nums2 = [3,4]`\
+Output: `2.50000`\
+Explanation: `merged array = [1,2,3,4] and median is (2 + 3) / 2 = 2.5.`\
+
+----
+- **Idea**
+
+Looking at this example, only thing we have to do is to put 2 in it's position, and done. The only thing we have to look out for are the edge cases, there are multiple edge cases for this problem. I can't write all down here, but whatever it is all we have to do is to put down the smallest integer comparing the two integers from both the arrays and put it in the new vector, and we got ourself the merged array which is also sorted.
+
+I am not too sure about the time complexity though since the question asked for `O(log(m+n))`, and I used a `for` loop ranging `0:m+n` so I think the time complexity should be `O(m+n)`. Anyhow the solution got accepted with runtime of `41 ms` faster than `75%` of submission. So I am happy with it.
+
+As per the space complexity goes it's `O(m+n)`, since we are making a new vector of that size.
